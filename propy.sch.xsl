@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
    <title>ISO Schematron rules</title>
-   <!-- This file generated 2023-03-24T12:52:55Z by 'extract-isosch.xsl'. -->
+   <!-- This file generated 2023-03-24T12:54:44Z by 'extract-isosch.xsl'. -->
    <!-- ********************* -->
    <!-- namespaces, declared: -->
    <!-- ********************* -->
