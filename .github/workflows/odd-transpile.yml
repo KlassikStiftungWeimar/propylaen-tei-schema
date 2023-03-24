@@ -2,13 +2,21 @@ on: [push]
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '8'
+      - uses: DeLaGuardo/setup-clojure@10.2
+        with:
+          cli: latest
+      - run: clojure -M:site
       - uses: gremid/tei-stylesheets-action@10a6f09e7e7ce2fa87ee75c868a06a9d4f3783b2
         with:
           transform: teitoodd

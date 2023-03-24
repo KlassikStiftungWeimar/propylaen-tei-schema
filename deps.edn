@@ -1,0 +1,4 @@
+{:deps {com.lambdaisland/ornament                 {:mvn/version "0.8.84"}
+        com.lambdaisland/hiccup                   {:mvn/version "0.0.4"}
+        com.vladsch.flexmark/flexmark             {:mvn/version "0.64.0"}}
+ :aliases {:site {:main-opts ["-m" "propylaen.tei-schema"]}}}
