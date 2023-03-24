@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">ODD file for the PROPYLÄEN project, based on the DTA 'Base Format' for manuscripts (DTABf-M)</title>
+        <title type="sub">Version 1.0.0</title>
+        <editor>
+          <persName><surname>Thomas</surname><forename>Christian</forename></persName>
+          <persName><surname>Prell</surname><forename>Martin</forename></persName>
+          <persName><surname>Middell</surname><forename>Gregor</forename></persName>
+        </editor>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p/>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <!-- cf. https://teic.github.io/TCW/howtoChain.html -->
+      <schemaSpec ident="propy" docLang="de" prefix="tei_" start="TEI" xml:lang="en" source="basisformat_ms.xml">
+        <!-- We create a superset of DTABf-M by referring to TEI-P5-all for
+             modules. This gives us, among other new markup options:
+             <correspDesc/>, <msContents/>. -->
+        <moduleRef key="core" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <moduleRef key="header" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <moduleRef key="tei" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <moduleRef key="corpus" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <moduleRef key="namesdates" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <moduleRef key="msdescription" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <moduleRef key="transcr" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <moduleRef key="textstructure" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <moduleRef key="figures" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <moduleRef key="linking" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <moduleRef key="textcrit" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <moduleRef key="gaiji" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>
