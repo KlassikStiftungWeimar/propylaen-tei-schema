@@ -117,7 +117,7 @@
 
 (defstyled schema-files :ul
   :mt-8
-  [:li :mt-2 :text-lg]
+  [:li :text-lg]
   [:a :text-sky-600]
   ([files]
    [:<>
