@@ -1,4 +1,7 @@
-on: [push]
+on:
+  push:
+    branches:
+      - release
 
 jobs:
   deploy:
@@ -9,27 +12,27 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v3
-      - uses: gremid/tei-stylesheets-action@10a6f09e7e7ce2fa87ee75c868a06a9d4f3783b2
+      - uses: gremid/tei-stylesheets-action@v7.54.0.1
         with:
           transform: teitoodd
           source: ./basisformat_all.odd
           target: ./basisformat_all.xml
-      - uses: gremid/tei-stylesheets-action@10a6f09e7e7ce2fa87ee75c868a06a9d4f3783b2
+      - uses: gremid/tei-stylesheets-action@v7.54.0.1
         with:
           transform: teitoodd
           source: ./basisformat_ms.odd
           target: ./basisformat_ms.xml
-      - uses: gremid/tei-stylesheets-action@10a6f09e7e7ce2fa87ee75c868a06a9d4f3783b2
+      - uses: gremid/tei-stylesheets-action@v7.54.0.1
         with:
           transform: teitornc
           source: ./propy.odd
           target: ./public/propy.rnc
-      - uses: gremid/tei-stylesheets-action@10a6f09e7e7ce2fa87ee75c868a06a9d4f3783b2
+      - uses: gremid/tei-stylesheets-action@v7.54.0.1
         with:
           transform: teitorelaxng
           source: ./propy.odd
           target: ./public/propy.rng
-      - uses: gremid/tei-stylesheets-action@10a6f09e7e7ce2fa87ee75c868a06a9d4f3783b2
+      - uses: gremid/tei-stylesheets-action@v7.54.0.1
         with:
           transform: teitoschematron
           source: ./propy.odd
