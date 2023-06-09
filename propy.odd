@@ -39,6 +39,20 @@
         <moduleRef key="linking" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
         <moduleRef key="textcrit" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
         <moduleRef key="gaiji" source="https://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+        <!-- @function may contain multiple word-like tags, allowing for the grouping of elements -->
+        <classSpec ident="att.segLike" type="atts" mode="change">
+          <attList>
+            <attDef ident="function" usage="opt" mode="change">
+              <datatype maxOccurs="unbounded"><dataRef key="teidata.word"/></datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        <!-- <anchor/> elements can be grouped by @function-based tagging -->
+        <elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="linking" ident="anchor">
+          <classes mode="change">
+            <memberOf key="att.segLike"/>
+          </classes>
+        </elementSpec>
       </schemaSpec>
     </body>
   </text>
