@@ -7,7 +7,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2023-06-09T07:56:37Z. .
+# Schema generated from ODD source 2023-06-09T08:03:52Z. .
 # TEI Edition: 
 # TEI Edition Location: https://www.tei-c.org/Vault/P5//
 #
@@ -9606,6 +9606,16 @@ tei_ab =
     tei_att.declaring.attributes,
     tei_att.fragmentable.attributes,
     tei_att.written.attributes,
+    empty
+  }
+tei_anchor =
+  
+  ## (Ankerpunkt) fügt an einer Stelle im Text eine Kennung ein, unabhängig von der Textstruktur. [ ]
+  element anchor {
+    empty,
+    tei_att.segLike.attributes,
+    tei_att.global.attributes,
+    tei_att.typed.attributes,
     empty
   }
 tei_seg =
