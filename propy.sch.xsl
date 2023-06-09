@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
    <title>ISO Schematron rules</title>
-   <!-- This file generated 2023-03-27T10:39:01Z by 'extract-isosch.xsl'. -->
+   <!-- This file generated 2023-06-09T07:56:58Z by 'extract-isosch.xsl'. -->
    <!-- ********************* -->
    <!-- namespaces, declared: -->
    <!-- ********************* -->
    <ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
    <ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
    <ns prefix="rng" uri="http://relaxng.org/ns/structure/1.0"/>
+   <ns prefix="rna" uri="http://relaxng.org/ns/compatibility/annotations/1.0"/>
    <!-- ********************* -->
    <!-- namespaces, implicit: -->
    <!-- ********************* -->
