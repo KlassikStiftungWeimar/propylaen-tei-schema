@@ -48,7 +48,7 @@
           </attList>
         </classSpec>
         <!-- <anchor/> elements can be grouped by @function-based tagging -->
-        <elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="linking" ident="anchor">
+        <elementSpec xmlns="http://www.tei-c.org/ns/1.0" module="linking" ident="anchor" mode="change">
           <classes mode="change">
             <memberOf key="att.segLike"/>
           </classes>
